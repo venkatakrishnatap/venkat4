@@ -1,0 +1,49 @@
+{ 
+"nodes":[{ 
+     "uid":"8753019d-5e23-4047-be3e-7968165b4302", 
+     "packageName":"HBCWorkflow", 
+     "commandName":"InitialStep", 
+     "attributes":[ { 
+         "name":"formId", 
+         "value":{"string":"2896" } 
+                      }, 
+        {"name":"stepInput", 
+		  "value":{ 
+		      "type":"TASKBOT", 
+		      "taskbotFile":{ 
+		      "type":"TASKBOT", 
+              "string":"repository:///Automation%20Anywhere/Bots/F-ProcessWith2DependencyLISF/F-formLevel_1_ValidateFvdG/FormCustomerIDForProcess2894idGH-Test" }}}, 
+		 {"name":"caseTitle", 
+         "value":{"string":"CustomerID" }}, 
+		 {"name":"stepTitle", 
+		  "value":{"string":"CustomerID {Task Name}"}}], 
+       "children":[{ 
+       "uid":"89e1aa0e-2edb-4781-8bdc-571c348731e1", 
+       "packageName":"HBCWorkflow", 
+       "commandName":"schedule", 
+       "attributes":[{"name":"stepId", 
+                     "value":{"string":"4bc51b65-ade4-435a-a98b-b530a5143cca" }}], 
+        "children":[] 
+         }]},{ 
+           "uid":"4bc51b65-ade4-435a-a98b-b530a5143cca" , 
+           "packageName":"HBCWorkflow", 
+           "commandName":"BotStep", 
+           "attributes":[{ 
+                 "name":"stepAlias", 
+                 "value":{"string":"MessageBotTaskBot"}},{ 
+                   "name":"stepTitle", 
+	                "value":{"string":"MessageTaskBot {Task Name}"}},{ 
+                   "name":"stepInput",  
+                   "value":{"type":"TASKBOT", 
+                   "taskbotFile":{"type":"TASKBOT", 
+                          "string":"repository:///Automation%20Anywhere/Bots/F-ProcessWith2DependencyLISF/F-TaskBotLevel_1_ValidateTCmS/TaskBotForProcess2894wFkk-Test" } } } ], 
+                          "children":[{ 
+                             "uid":"15933b1e-1f48-47e3-88cb-306fb845da98", 
+                             "packageName":"HBCWorkflow",  
+		                      "commandName":"exit", 
+		     "attributes":[{    
+                   "name":"caseExit", 
+        		    "value":{"string":"SUCCESS"}}]}]}], 
+     "variables":[{"variable":"input[undefined]", 
+     "node":"input","value":"$input[undefined]$", 
+     "optionType":"input","input":true,"output":false}]}
